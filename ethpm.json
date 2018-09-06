@@ -1,0 +1,11 @@
+{
+  "package_name": "tokenboost-solidity",
+  "version": "1.0.0",
+  "description": "",
+  "authors": "",
+  "keywords": [],
+  "dependencies": {
+    "oraclize-api": "1.0.0"
+  },
+  "license": "MIT"
+}
