@@ -1,20 +1,40 @@
 {
   "name": "tokenboost-solidity",
   "version": "1.0.0",
-  "description": "",
+  "description": "Solidity contracts for TokenBoost",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
+  "files": [
+    "contracts",
+    "test"
+  ],
   "scripts": {
     "test": "truffle compile && truffle test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokenboost/tokenboost-solidity"
+  },
+  "keywords": [
+    "solidity",
+    "ethereum",
+    "smart",
+    "contracts",
+    "tokenboost",
+    "token",
+    "raiser",
+    "boost"
+  ],
+  "author": "Yoonjae Yoo <yoonjae@dnext.co>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/tokenboost/tokenboost-solidity/issues"
+  },
+  "homepage": "https://github.com/tokenboost/tokenboost-solidity",
   "dependencies": {
     "dotenv": "6.0.0",
-    "truffle-flattener": "1.2.6",
     "truffle-hdwallet-provider": "0.0.6",
     "zeppelin-solidity": "^1.12.0"
   },
