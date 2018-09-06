@@ -1,4 +1,6 @@
 # TokenBoost Solidity
+[![npm version](https://badge.fury.io/js/tokenboost-solidity.svg)](https://www.npmjs.com/package/tokenboost-solidity)
+
 Solidity contracts for [TokenBoost](https://tokenboost.net).
 
 ## Install
