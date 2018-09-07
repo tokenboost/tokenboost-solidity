@@ -40,6 +40,8 @@ contract ERC20Sale is Sale {
         ERC20 _token
     ) public Sale(_owner, _projectName, _name) {
         token = _token;
+
+        _registerInterface(InterfaceId_ERC20Sale);
     }
 
     function update(
