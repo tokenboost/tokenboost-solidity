@@ -15,7 +15,7 @@ module.exports = async function (web3, identifier, Contract, WidgetRenderer, Tem
     if (WidgetRenderer != null) {
         let renderer = await WidgetRenderer.deployed();
         bytecode = Contract.bytecode.replace(
-            new RegExp(("__" + WidgetRenderer.contractName).substr(0, 20).toHex(), "gi"),
+            new RegExp(("__" + WidgetRenderer.contractName + "__________________").substr(0, 20).toHex(), "gi"),
             renderer.address.substr(2)
         );
     }
@@ -23,6 +23,7 @@ module.exports = async function (web3, identifier, Contract, WidgetRenderer, Tem
 
     let bytecodeHash = web3.sha3(bytecode, {encoding: 'hex'});
     console.log("bytecodeHash: " + bytecodeHash);
+
     let template = await Template.new(bytecodeHash, price, beneficiary);
     await template.setNameAndDescription('', name, description);
     console.log(Template.contractName + ": " + template.address);

@@ -9,7 +9,7 @@ module.exports = async function (callback) {
     try {
         await updateTemplate(
             web3,
-            "net.tokenboost.sale.erc20",
+            "net.tokenboost.token.erc20",
             RenderableERC20Token,
             ERC20TokenRenderer,
             ERC20TokenTemplate,
