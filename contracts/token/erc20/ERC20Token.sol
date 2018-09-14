@@ -20,7 +20,7 @@ contract ERC20Token is Token, RBACMintableToken, BurnableToken, PausableToken {
      */
     bytes4 public constant InterfaceId_ERC20Token = 0x98b0f321;
 
-    uint8 public decimals;
+    uint8 public decimals = 18;
     uint256 public initialSupply;
     bool public mintable;
     uint256 public maxMintable;
