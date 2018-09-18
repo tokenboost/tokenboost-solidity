@@ -1,0 +1,437 @@
+{
+  "contractName": "BoolUtils",
+  "abi": [],
+  "bytecode": "0x604c602c600b82828239805160001a60731460008114601c57601e565bfe5b5030600052607381538281f30073000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582068ae7c6d0f8cab14eade535508d33e09ebed6fba03205e30c53b76a7211bb1640029",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fd00a165627a7a7230582068ae7c6d0f8cab14eade535508d33e09ebed6fba03205e30c53b76a7211bb1640029",
+  "sourceMap": "26:204:19:-;;132:2:-1;166:7;155:9;146:7;137:37;252:7;246:14;243:1;238:23;232:4;229:33;270:1;265:20;;;;222:63;;265:20;274:9;222:63;;298:9;295:1;288:20;328:4;319:7;311:22;352:7;343;336:24",
+  "deployedSourceMap": "26:204:19:-;;;;;;;;",
+  "source": "pragma solidity ^0.4.24;\n\nlibrary BoolUtils {\n    function toString(bool _self) internal pure returns (string memory) {\n        if (_self) {\n            return \"true\";\n        } else {\n            return \"false\";\n        }\n    }\n}\n",
+  "sourcePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/utils/BoolUtils.sol",
+  "ast": {
+    "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/utils/BoolUtils.sol",
+    "exportedSymbols": {
+      "BoolUtils": [
+        2313
+      ]
+    },
+    "id": 2314,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2296,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2313,
+        "linearizedBaseContracts": [
+          2313
+        ],
+        "name": "BoolUtils",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2311,
+              "nodeType": "Block",
+              "src": "118:110:19",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 2303,
+                    "name": "_self",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2298,
+                    "src": "132:5:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 2309,
+                    "nodeType": "Block",
+                    "src": "183:39:19",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 2307,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "204:7:19",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_ba9154e0baa69c78e0ca563b867df81bae9d177c4ea1452c35c84386a70f0f7a",
+                            "typeString": "literal_string \"false\""
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 2302,
+                        "id": 2308,
+                        "nodeType": "Return",
+                        "src": "197:14:19"
+                      }
+                    ]
+                  },
+                  "id": 2310,
+                  "nodeType": "IfStatement",
+                  "src": "128:94:19",
+                  "trueBody": {
+                    "id": 2306,
+                    "nodeType": "Block",
+                    "src": "139:38:19",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 2304,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "160:6:19",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_6273151f959616268004b58dbb21e5c851b7b8d04498b4aabee12291d22fc034",
+                            "typeString": "literal_string \"true\""
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 2302,
+                        "id": 2305,
+                        "nodeType": "Return",
+                        "src": "153:13:19"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2312,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "toString",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2299,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2298,
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2312,
+                  "src": "68:10:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2297,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "68:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "67:12:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2302,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2301,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2312,
+                  "src": "103:6:19",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2300,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "102:15:19"
+            },
+            "scope": 2313,
+            "src": "50:178:19",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2314,
+        "src": "26:204:19"
+      }
+    ],
+    "src": "0:231:19"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/utils/BoolUtils.sol",
+    "exportedSymbols": {
+      "BoolUtils": [
+        2313
+      ]
+    },
+    "id": 2314,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2296,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:19"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2313,
+        "linearizedBaseContracts": [
+          2313
+        ],
+        "name": "BoolUtils",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2311,
+              "nodeType": "Block",
+              "src": "118:110:19",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "id": 2303,
+                    "name": "_self",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 2298,
+                    "src": "132:5:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 2309,
+                    "nodeType": "Block",
+                    "src": "183:39:19",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 2307,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "204:7:19",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_ba9154e0baa69c78e0ca563b867df81bae9d177c4ea1452c35c84386a70f0f7a",
+                            "typeString": "literal_string \"false\""
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 2302,
+                        "id": 2308,
+                        "nodeType": "Return",
+                        "src": "197:14:19"
+                      }
+                    ]
+                  },
+                  "id": 2310,
+                  "nodeType": "IfStatement",
+                  "src": "128:94:19",
+                  "trueBody": {
+                    "id": 2306,
+                    "nodeType": "Block",
+                    "src": "139:38:19",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 2304,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "160:6:19",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_6273151f959616268004b58dbb21e5c851b7b8d04498b4aabee12291d22fc034",
+                            "typeString": "literal_string \"true\""
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 2302,
+                        "id": 2305,
+                        "nodeType": "Return",
+                        "src": "153:13:19"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2312,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "toString",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2299,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2298,
+                  "name": "_self",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2312,
+                  "src": "68:10:19",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2297,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "68:4:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "67:12:19"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 2302,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2301,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2312,
+                  "src": "103:6:19",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2300,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "103:6:19",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "102:15:19"
+            },
+            "scope": 2313,
+            "src": "50:178:19",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2314,
+        "src": "26:204:19"
+      }
+    ],
+    "src": "0:231:19"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-18T20:04:45.642Z"
+}

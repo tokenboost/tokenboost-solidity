@@ -2,11 +2,11 @@
   "name": "tokenboost-solidity",
   "version": "1.0.1",
   "description": "Solidity contracts for TokenBoost",
-  "main": "truffle-config.js",
   "directories": {
     "test": "test"
   },
   "files": [
+    "build/contracts",
     "contracts",
     "test"
   ],
