@@ -5,6 +5,7 @@ import "./ERC20TokenWidgetRenderer.sol";
 import "../../../widget/Widgets.sol";
 
 contract TransferWidgetRenderer is ERC20TokenWidgetRenderer {
+    using strings for *;
     using Widgets for Widgets.Widget;
     using UintUtils for uint;
 

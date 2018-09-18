@@ -6,6 +6,7 @@ import "./ERC20TokenWidgetRenderer.sol";
 import "../../../widget/Widgets.sol";
 
 contract MintTokensWidgetRenderer is ERC20TokenWidgetRenderer {
+    using strings for *;
     using Widgets for Widgets.Widget;
     using UintUtils for uint;
     using SafeMath for uint;

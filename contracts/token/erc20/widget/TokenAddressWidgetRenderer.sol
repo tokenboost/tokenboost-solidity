@@ -3,10 +3,12 @@ pragma solidity ^0.4.24;
 import "./ERC20TokenWidgetRenderer.sol";
 import "../../../widget/Widgets.sol";
 import "../../../utils/AddressUtils.sol";
+import "../../../utils/StringUtils.sol";
 
 contract TokenAddressWidgetRenderer is ERC20TokenWidgetRenderer {
     using Widgets for Widgets.Widget;
     using AddressUtils for address;
+    using StringUtils for string;
 
     string public constant TOKEN_ADDRESS = "token_address";
     string public constant SHORT_DESC = "short_desc";
@@ -19,7 +21,7 @@ contract TokenAddressWidgetRenderer is ERC20TokenWidgetRenderer {
             TOKEN_ADDRESS,
             "address",
             resources[_locale][TOKEN_ADDRESS],
-            quote(address(_token).toString()),
+            address(_token).toString().quoted(),
             Actions.empty(),
             Tables.empty()
         );

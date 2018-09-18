@@ -6,11 +6,14 @@ import "../../../utils/BoolUtils.sol";
 import "../../../utils/AddressUtils.sol";
 import "../../../widget/Elements.sol";
 import "../ERC20Sale.sol";
+import "../../../utils/StringUtils.sol";
 
 contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
+    using strings for *;
     using UintUtils for uint;
     using BoolUtils for bool;
     using AddressUtils for address;
+    using StringUtils for string;
     using Elements for Elements.Element;
 
     string public constant TOKEN_ADDRESS = "token_address";
@@ -32,7 +35,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             TOKEN_ADDRESS,
             "addressEdit",
             resources[_locale][TOKEN_ADDRESS],
-            quote(address(_sale.token()).toString()),
+            address(_sale.token()).toString().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -41,7 +44,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             PROJECT_NAME,
             "textEdit",
             resources[_locale][PROJECT_NAME],
-            quote(_sale.projectName()),
+            _sale.projectName().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -50,7 +53,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             PROJECT_SUMMARY,
             "textEdit",
             resources[_locale][PROJECT_SUMMARY],
-            quote(_sale.projectSummary()),
+            _sale.projectSummary().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -59,7 +62,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             PROJECT_DESCRIPTION,
             "markdownEdit",
             resources[_locale][PROJECT_DESCRIPTION],
-            quote(_sale.projectSummary()),
+            _sale.projectSummary().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -68,7 +71,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             SALE_NAME,
             "textEdit",
             resources[_locale][SALE_NAME],
-            quote(_sale.name()),
+            _sale.name().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -77,7 +80,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             LOGO_URL,
             "urlEdit",
             resources[_locale][LOGO_URL],
-            quote(_sale.logoUrl()),
+            _sale.logoUrl().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -86,7 +89,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             COVER_IMAGE_URL,
             "urlEdit",
             resources[_locale][COVER_IMAGE_URL],
-            quote(_sale.coverImageUrl()),
+            _sale.coverImageUrl().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -95,7 +98,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             WEBSITE_URL,
             "urlEdit",
             resources[_locale][WEBSITE_URL],
-            quote(_sale.websiteUrl()),
+            _sale.websiteUrl().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -104,7 +107,7 @@ contract ERC20SaleInputsRenderer is ERC20SaleWidgetRenderer {
             WHITEPAPER_URL,
             "urlEdit",
             resources[_locale][WHITEPAPER_URL],
-            quote(_sale.whitepaperUrl()),
+            _sale.whitepaperUrl().quoted(),
             Actions.empty(),
             Tables.empty()
         );

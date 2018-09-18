@@ -4,10 +4,13 @@ import "./ERC20TokenWidgetRenderer.sol";
 import "../../../utils/UintUtils.sol";
 import "../../../utils/BoolUtils.sol";
 import "../../../widget/Elements.sol";
+import "../../../utils/StringUtils.sol";
 
 contract ERC20TokenInputsRenderer is ERC20TokenWidgetRenderer {
+    using strings for *;
     using UintUtils for uint;
     using BoolUtils for bool;
+    using StringUtils for string;
     using Elements for Elements.Element;
 
     string public constant NAME = "name";
@@ -27,7 +30,7 @@ contract ERC20TokenInputsRenderer is ERC20TokenWidgetRenderer {
             NAME,
             "textEdit",
             resources[_locale][NAME],
-            quote(_token.name()),
+            _token.name().quoted(),
             Actions.empty(),
             Tables.empty()
         );
@@ -36,7 +39,7 @@ contract ERC20TokenInputsRenderer is ERC20TokenWidgetRenderer {
             SYMBOL,
             "textEdit",
             resources[_locale][SYMBOL],
-            quote(_token.symbol()),
+            _token.symbol().quoted(),
             Actions.empty(),
             Tables.empty()
         );

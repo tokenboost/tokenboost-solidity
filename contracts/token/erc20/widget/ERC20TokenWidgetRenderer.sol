@@ -1,9 +1,9 @@
 pragma solidity ^0.4.24;
 
-import "../../../widget/WidgetRenderer.sol";
+import "../../../widget/Localizable.sol";
 import "../ERC20Token.sol";
 
-contract ERC20TokenWidgetRenderer is WidgetRenderer {
+contract ERC20TokenWidgetRenderer is Localizable {
     function render(string _locale, ERC20Token _token) public view returns (string) {
         return "[]";
     }

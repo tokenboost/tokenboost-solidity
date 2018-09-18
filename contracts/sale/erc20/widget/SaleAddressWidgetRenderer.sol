@@ -3,10 +3,12 @@ pragma solidity ^0.4.24;
 import "./ERC20SaleWidgetRenderer.sol";
 import "../../../widget/Widgets.sol";
 import "../../../utils/AddressUtils.sol";
+import "../../../utils/StringUtils.sol";
 
 contract SaleAddressWidgetRenderer is ERC20SaleWidgetRenderer {
     using Widgets for Widgets.Widget;
     using AddressUtils for address;
+    using StringUtils for string;
 
     string public constant SALE_ADDRESS = "sale_address";
     string public constant SHORT_DESC = "short_desc";
@@ -19,7 +21,7 @@ contract SaleAddressWidgetRenderer is ERC20SaleWidgetRenderer {
             SALE_ADDRESS,
             "address",
             resources[_locale][SALE_ADDRESS],
-            quote(address(_sale).toString()),
+            address(_sale).toString().quoted(),
             Actions.empty(),
             Tables.empty()
         );
