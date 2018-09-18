@@ -1,5 +1,5 @@
 const SaleRegistry = artifacts.require("SaleRegistry");
 
-module.exports = async function (deployer) {
-    await deployer.deploy(SaleRegistry);
+module.exports = function (deployer) {
+    deployer.deploy(SaleRegistry, {overwrite: false});
 };

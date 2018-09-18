@@ -1,5 +1,5 @@
 const TokenRegistry = artifacts.require("TokenRegistry");
 
-module.exports = async function (deployer) {
-    await deployer.deploy(TokenRegistry);
+module.exports = function (deployer) {
+    deployer.deploy(TokenRegistry, {overwrite: false});
 };

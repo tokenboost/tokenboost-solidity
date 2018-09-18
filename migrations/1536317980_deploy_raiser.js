@@ -2,5 +2,5 @@ const Boost = artifacts.require("Boost");
 const Raiser = artifacts.require("Raiser");
 
 module.exports = function (deployer) {
-    deployer.deploy(Raiser, Boost.address);
+    deployer.deploy(Raiser, Boost.address, {overwrite: false});
 };
