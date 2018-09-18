@@ -16,13 +16,13 @@ module.exports = function (deployer) {
         let claimRefundWidgetRenderer = await deployer.deploy(ClaimRefundWidgetRenderer);
         let erc20SaleInputsRenderer = await deployer.deploy(ERC20SaleInputsRenderer);
 
-        await erc20SaleRenderer.addAdminWidgetRenderers([
+        await erc20SaleRenderer.setAdminWidgetRenderers([
             fundsRaisedWidgetRenderer.address,
             saleAddressWidgetRenderer.address,
             tokenInfoWidgetRenderer.address,
             withdrawFundsWidgetRenderer.address
         ]);
-        await erc20SaleRenderer.addUserWidgetRenderers([
+        await erc20SaleRenderer.setUserWidgetRenderers([
             claimRefundWidgetRenderer.address
         ]);
         await erc20SaleRenderer.setInputsRenderer(erc20SaleInputsRenderer.address);

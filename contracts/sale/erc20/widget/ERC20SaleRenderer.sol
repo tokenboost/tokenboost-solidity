@@ -7,20 +7,32 @@ import "./ERC20SaleInputsRenderer.sol";
 contract ERC20SaleRenderer {
     using strings for *;
 
-    ERC20SaleWidgetRenderer[] public adminWidgetRenderers;
-    ERC20SaleWidgetRenderer[] public userWidgetRenderers;
+    ERC20SaleWidgetRenderer[] adminWidgetRenderers;
+    ERC20SaleWidgetRenderer[] userWidgetRenderers;
     ERC20SaleInputsRenderer public inputsRenderer;
 
-    function addAdminWidgetRenderers(ERC20SaleWidgetRenderer[] _renderers) public {
-        for (uint i = 0; i < _renderers.length; i++) {
-            adminWidgetRenderers.push(_renderers[i]);
-        }
+    function setAdminWidgetRenderers(ERC20SaleWidgetRenderer[] _renderers) public {
+        adminWidgetRenderers = _renderers;
     }
 
-    function addUserWidgetRenderers(ERC20SaleWidgetRenderer[] _renderers) public {
-        for (uint i = 0; i < _renderers.length; i++) {
-            userWidgetRenderers.push(_renderers[i]);
-        }
+    function numberOfAdminWidgetRenderers() public returns (uint) {
+        return adminWidgetRenderers.length;
+    }
+
+    function getAdminWidgetRendererAt(uint index) public returns (ERC20SaleWidgetRenderer) {
+        return adminWidgetRenderers[index];
+    }
+
+    function setUserWidgetRenderers(ERC20SaleWidgetRenderer[] _renderers) public {
+        userWidgetRenderers = _renderers;
+    }
+
+    function numberOfUserWidgetRenderers() public returns (uint) {
+        return userWidgetRenderers.length;
+    }
+
+    function getUserWidgetRendererAt(uint index) public returns (ERC20SaleWidgetRenderer) {
+        return userWidgetRenderers[index];
     }
 
     function setInputsRenderer(ERC20SaleInputsRenderer _renderer) public {

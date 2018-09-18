@@ -8,18 +8,30 @@ contract ERC20TokenRenderer {
 
     ERC20TokenWidgetRenderer[] adminWidgetRenderers;
     ERC20TokenWidgetRenderer[] userWidgetRenderers;
-    ERC20TokenInputsRenderer inputsRenderer;
+    ERC20TokenInputsRenderer public inputsRenderer;
 
-    function addAdminWidgetRenderers(ERC20TokenWidgetRenderer[] _renderers) public {
-        for (uint i = 0; i < _renderers.length; i++) {
-            adminWidgetRenderers.push(_renderers[i]);
-        }
+    function setAdminWidgetRenderers(ERC20TokenWidgetRenderer[] _renderers) public {
+        adminWidgetRenderers = _renderers;
     }
 
-    function addUserWidgetRenderers(ERC20TokenWidgetRenderer[] _renderers) public {
-        for (uint i = 0; i < _renderers.length; i++) {
-            userWidgetRenderers.push(_renderers[i]);
-        }
+    function numberOfAdminWidgetRenderers() public returns (uint) {
+        return adminWidgetRenderers.length;
+    }
+
+    function getAdminWidgetRendererAt(uint index) public returns (ERC20TokenWidgetRenderer) {
+        return adminWidgetRenderers[index];
+    }
+
+    function setUserWidgetRenderers(ERC20TokenWidgetRenderer[] _renderers) public {
+        userWidgetRenderers = _renderers;
+    }
+
+    function numberOfUserWidgetRenderers() public returns (uint) {
+        return userWidgetRenderers.length;
+    }
+
+    function getUserWidgetRendererAt(uint index) public returns (ERC20TokenWidgetRenderer) {
+        return userWidgetRenderers[index];
     }
 
     function setInputsRenderer(ERC20TokenInputsRenderer _renderer) public {

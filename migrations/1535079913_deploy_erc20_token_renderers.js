@@ -24,7 +24,7 @@ module.exports = function (deployer) {
         let transferWidgetRenderer = await deployer.deploy(TransferWidgetRenderer);
         let erc20TokenInputsRenderer = await deployer.deploy(ERC20TokenInputsRenderer);
 
-        await erc20TokenRenderer.addAdminWidgetRenderers([
+        await erc20TokenRenderer.setAdminWidgetRenderers([
             totalSupplyWidget.address,
             tokenAddressWidget.address,
             maxMintableWidget.address,
@@ -33,7 +33,7 @@ module.exports = function (deployer) {
             pauseWidgetRenderer.address,
             unpauseWidgetRenderer.address
         ]);
-        await erc20TokenRenderer.addUserWidgetRenderers([
+        await erc20TokenRenderer.setUserWidgetRenderers([
             myBalanceWidgetRenderer.address,
             transferWidgetRenderer.address,
             burnTokensWidgetRenderer.address
