@@ -103,7 +103,7 @@ contract ERC20Sale is Sale {
         return tokenAmount;
     }
 
-    function _tokenReceiver(address _purchaser, uint256 _tokenAmount) private view returns (address) {
+    function _tokenReceiver(address _purchaser, uint256 _tokenAmount) private returns (address) {
         for (uint i = 0; i < activatedStrategies.length; i++) {
             ERC20SaleStrategy strategy = ERC20SaleStrategy(activatedStrategies[i]);
             if (strategy.receivesTokens(_purchaser, _tokenAmount)) {
