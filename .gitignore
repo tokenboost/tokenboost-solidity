@@ -1,8 +1,8 @@
 # Created by https://www.gitignore.io/api/solidity,intellij
 
 .idea
-build/**
-!build/contracts
+build/*
+!build/contracts/
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
