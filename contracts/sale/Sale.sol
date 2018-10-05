@@ -121,9 +121,9 @@ contract Sale is Contract, Activatable {
     function started() public view returns (bool) {
         if (!activated) return false;
 
-        bool s = true;
+        bool s = false;
         for (uint i = 0; i < activatedStrategies.length; i++) {
-            s = s && activatedStrategies[i].started();
+            s = s || activatedStrategies[i].started();
         }
         return s;
     }
@@ -131,9 +131,9 @@ contract Sale is Contract, Activatable {
     function successful() public view returns (bool){
         if (!started()) return false;
 
-        bool s = true;
+        bool s = false;
         for (uint i = 0; i < activatedStrategies.length; i++) {
-            s = s && activatedStrategies[i].successful();
+            s = s || activatedStrategies[i].successful();
         }
         return s;
     }
@@ -141,9 +141,9 @@ contract Sale is Contract, Activatable {
     function finished() public view returns (bool){
         if (!started()) return false;
 
-        bool f = true;
+        bool f = false;
         for (uint i = 0; i < activatedStrategies.length; i++) {
-            f = f && activatedStrategies[i].finished();
+            f = f || activatedStrategies[i].finished();
         }
         return f;
     }
