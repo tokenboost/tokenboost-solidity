@@ -14,6 +14,8 @@ contract Contract is Ownable, SupportsInterfaceWithLookup {
     Template public template;
 
     constructor(address _owner) public {
+        require(_owner != address(0));
+
         template = Template(msg.sender);
         owner = _owner;
 
