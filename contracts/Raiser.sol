@@ -16,7 +16,7 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
     uint256 public constant MAX_HALVING_ERA = 20;
 
     Boost public boost;
-    uint8 public rewardEra = 0;
+    uint256 public rewardEra = 0;
 
     uint256 weiUntilNextHalving = HALVING_WEI;
     mapping(uint256 => Sale) saleOfTokenId;
@@ -64,7 +64,7 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
         return saleOfTokenId[_tokenId];
     }
 
-    function claimableBoostsOf(uint256 _tokenId) public view returns (uint256 boosts, uint8 newRewardEra, uint256 newWeiUntilNextHalving) {
+    function claimableBoostsOf(uint256 _tokenId) public view returns (uint256 boosts, uint256 newRewardEra, uint256 newWeiUntilNextHalving) {
         if (rewardedBoostsOfSomeoneOfTokenId[_tokenId][msg.sender] > 0) {
             return (0, rewardEra, weiUntilNextHalving);
         }
@@ -81,7 +81,7 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
     }
 
     function claimBoostsOf(uint256 _tokenId) public returns (bool) {
-        (uint256 boosts, uint8 newRewardEra, uint256 newWeiUntilNextHalving) = claimableBoostsOf(_tokenId);
+        (uint256 boosts, uint256 newRewardEra, uint256 newWeiUntilNextHalving) = claimableBoostsOf(_tokenId);
         rewardEra = newRewardEra;
         weiUntilNextHalving = newWeiUntilNextHalving;
         if (boosts > 0) {
@@ -95,10 +95,10 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
         return rewardedBoostsOfSomeoneOfTokenId[_tokenId][msg.sender];
     }
 
-    function claimableBoosts() public view returns (uint256 boosts, uint8 newRewardEra, uint256 newWeiUntilNextHalving) {
+    function claimableBoosts() public view returns (uint256 boosts, uint256 newRewardEra, uint256 newWeiUntilNextHalving) {
         for (uint i = 0; i < totalSupply(); i++) {
             uint256 tokenId = tokenByIndex(i);
-            (uint256 b, uint8 r, uint256 w) = claimableBoostsOf(tokenId);
+            (uint256 b, uint256 r, uint256 w) = claimableBoostsOf(tokenId);
             boosts = boosts.add(b);
             newRewardEra = r;
             newWeiUntilNextHalving = w;
@@ -125,7 +125,7 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
         return boosts;
     }
 
-    function _weiToBoosts(uint256 _weiAmount) private view returns (uint256 boosts, uint8 newRewardEra, uint256 newWeiUntilNextHalving) {
+    function _weiToBoosts(uint256 _weiAmount) private view returns (uint256 boosts, uint256 newRewardEra, uint256 newWeiUntilNextHalving) {
         if (rewardEra > MAX_HALVING_ERA) {
             return (0, rewardEra, weiUntilNextHalving);
         }
@@ -135,7 +135,7 @@ contract Raiser is ERC721Token("Raiser", "RAI"), Ownable {
         newWeiUntilNextHalving = weiUntilNextHalving;
         while (amount > 0) {
             uint256 a = _min(amount, weiUntilNextHalving);
-            boosts = boosts.add(a.mul(2 ** (MAX_HALVING_ERA - newRewardEra).div(1000)));
+            boosts = boosts.add(a.mul(2 ** (MAX_HALVING_ERA.sub(newRewardEra)).div(1000)));
             amount = amount.sub(a);
             newWeiUntilNextHalving = newWeiUntilNextHalving.sub(a);
             if (newWeiUntilNextHalving == 0) {
