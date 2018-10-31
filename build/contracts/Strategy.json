@@ -192,14 +192,14 @@
     "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/strategy/Strategy.sol",
     "exportedSymbols": {
       "Strategy": [
-        1330
+        1389
       ]
     },
-    "id": 1331,
+    "id": 1390,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1295,
+        "id": 1354,
         "literals": [
           "solidity",
           "^",
@@ -212,9 +212,9 @@
       {
         "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/Contract.sol",
         "file": "../Contract.sol",
-        "id": 1296,
+        "id": 1355,
         "nodeType": "ImportDirective",
-        "scope": 1331,
+        "scope": 1390,
         "sourceUnit": 90,
         "src": "26:25:5",
         "symbolAliases": [],
@@ -223,9 +223,9 @@
       {
         "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/Activatable.sol",
         "file": "../Activatable.sol",
-        "id": 1297,
+        "id": 1356,
         "nodeType": "ImportDirective",
-        "scope": 1331,
+        "scope": 1390,
         "sourceUnit": 34,
         "src": "52:28:5",
         "symbolAliases": [],
@@ -237,7 +237,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1298,
+              "id": 1357,
               "name": "Contract",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 89,
@@ -247,7 +247,7 @@
                 "typeString": "contract Contract"
               }
             },
-            "id": 1299,
+            "id": 1358,
             "nodeType": "InheritanceSpecifier",
             "src": "103:8:5"
           },
@@ -255,7 +255,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1300,
+              "id": 1359,
               "name": "Activatable",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 33,
@@ -265,39 +265,39 @@
                 "typeString": "contract Activatable"
               }
             },
-            "id": 1301,
+            "id": 1360,
             "nodeType": "InheritanceSpecifier",
             "src": "113:11:5"
           }
         ],
         "contractDependencies": [
-          89,
           33,
-          4594,
-          4645,
-          4825
+          89,
+          4653,
+          4704,
+          4884
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1330,
+        "id": 1389,
         "linearizedBaseContracts": [
-          1330,
+          1389,
           33,
           89,
-          4645,
-          4594,
-          4825
+          4704,
+          4653,
+          4884
         ],
         "name": "Strategy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1304,
+            "id": 1363,
             "name": "InterfaceId_Strategy",
             "nodeType": "VariableDeclaration",
-            "scope": 1330,
+            "scope": 1389,
             "src": "308:56:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -306,7 +306,7 @@
               "typeString": "bytes4"
             },
             "typeName": {
-              "id": 1302,
+              "id": 1361,
               "name": "bytes4",
               "nodeType": "ElementaryTypeName",
               "src": "308:6:5",
@@ -318,7 +318,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30783665333031393235",
-              "id": 1303,
+              "id": 1362,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -337,7 +337,7 @@
           },
           {
             "body": {
-              "id": 1316,
+              "id": 1375,
               "nodeType": "Block",
               "src": "423:57:5",
               "statements": [
@@ -347,11 +347,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1313,
+                        "id": 1372,
                         "name": "InterfaceId_Strategy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1304,
+                        "referencedDeclaration": 1363,
                         "src": "452:20:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes4",
@@ -366,18 +366,18 @@
                           "typeString": "bytes4"
                         }
                       ],
-                      "id": 1312,
+                      "id": 1371,
                       "name": "_registerInterface",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4644,
+                      "referencedDeclaration": 4703,
                       "src": "433:18:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
                         "typeString": "function (bytes4)"
                       }
                     },
-                    "id": 1314,
+                    "id": 1373,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -391,14 +391,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1315,
+                  "id": 1374,
                   "nodeType": "ExpressionStatement",
                   "src": "433:40:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 1317,
+            "id": 1376,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -407,11 +407,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1309,
+                    "id": 1368,
                     "name": "_owner",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1306,
+                    "referencedDeclaration": 1365,
                     "src": "415:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -419,10 +419,10 @@
                     }
                   }
                 ],
-                "id": 1310,
+                "id": 1369,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1308,
+                  "id": 1367,
                   "name": "Contract",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
@@ -440,15 +440,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1307,
+              "id": 1366,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1306,
+                  "id": 1365,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1317,
+                  "scope": 1376,
                   "src": "383:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -457,7 +457,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1305,
+                    "id": 1364,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:5",
@@ -474,12 +474,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1311,
+              "id": 1370,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "423:0:5"
             },
-            "scope": 1330,
+            "scope": 1389,
             "src": "371:109:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -487,7 +487,7 @@
           },
           {
             "body": {
-              "id": 1328,
+              "id": 1387,
               "nodeType": "Block",
               "src": "538:40:5",
               "statements": [
@@ -499,18 +499,18 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1324,
+                        "id": 1383,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6572,
+                        "referencedDeclaration": 6631,
                         "src": "555:5:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_Strategy_$1330",
+                          "typeIdentifier": "t_super$_Strategy_$1389",
                           "typeString": "contract super Strategy"
                         }
                       },
-                      "id": 1325,
+                      "id": 1384,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -524,7 +524,7 @@
                         "typeString": "function () returns (bool)"
                       }
                     },
-                    "id": 1326,
+                    "id": 1385,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -538,29 +538,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1323,
-                  "id": 1327,
+                  "functionReturnParameters": 1382,
+                  "id": 1386,
                   "nodeType": "Return",
                   "src": "548:23:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 1329,
+            "id": 1388,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1320,
+                "id": 1379,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1319,
+                  "id": 1378,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4773,
+                  "referencedDeclaration": 4832,
                   "src": "506:9:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -574,22 +574,22 @@
             "name": "activate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1318,
+              "id": 1377,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "503:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1323,
+              "id": 1382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1322,
+                  "id": 1381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1329,
+                  "scope": 1388,
                   "src": "532:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -598,7 +598,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1321,
+                    "id": 1380,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "532:4:5",
@@ -613,14 +613,14 @@
               ],
               "src": "531:6:5"
             },
-            "scope": 1330,
+            "scope": 1389,
             "src": "486:92:5",
             "stateMutability": "nonpayable",
             "superFunction": 32,
             "visibility": "public"
           }
         ],
-        "scope": 1331,
+        "scope": 1390,
         "src": "82:498:5"
       }
     ],
@@ -630,14 +630,14 @@
     "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/strategy/Strategy.sol",
     "exportedSymbols": {
       "Strategy": [
-        1330
+        1389
       ]
     },
-    "id": 1331,
+    "id": 1390,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1295,
+        "id": 1354,
         "literals": [
           "solidity",
           "^",
@@ -650,9 +650,9 @@
       {
         "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/Contract.sol",
         "file": "../Contract.sol",
-        "id": 1296,
+        "id": 1355,
         "nodeType": "ImportDirective",
-        "scope": 1331,
+        "scope": 1390,
         "sourceUnit": 90,
         "src": "26:25:5",
         "symbolAliases": [],
@@ -661,9 +661,9 @@
       {
         "absolutePath": "/Users/yoonjae/SolidityProjects/tokenboost-solidity/contracts/Activatable.sol",
         "file": "../Activatable.sol",
-        "id": 1297,
+        "id": 1356,
         "nodeType": "ImportDirective",
-        "scope": 1331,
+        "scope": 1390,
         "sourceUnit": 34,
         "src": "52:28:5",
         "symbolAliases": [],
@@ -675,7 +675,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1298,
+              "id": 1357,
               "name": "Contract",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 89,
@@ -685,7 +685,7 @@
                 "typeString": "contract Contract"
               }
             },
-            "id": 1299,
+            "id": 1358,
             "nodeType": "InheritanceSpecifier",
             "src": "103:8:5"
           },
@@ -693,7 +693,7 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 1300,
+              "id": 1359,
               "name": "Activatable",
               "nodeType": "UserDefinedTypeName",
               "referencedDeclaration": 33,
@@ -703,39 +703,39 @@
                 "typeString": "contract Activatable"
               }
             },
-            "id": 1301,
+            "id": 1360,
             "nodeType": "InheritanceSpecifier",
             "src": "113:11:5"
           }
         ],
         "contractDependencies": [
-          89,
           33,
-          4594,
-          4645,
-          4825
+          89,
+          4653,
+          4704,
+          4884
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1330,
+        "id": 1389,
         "linearizedBaseContracts": [
-          1330,
+          1389,
           33,
           89,
-          4645,
-          4594,
-          4825
+          4704,
+          4653,
+          4884
         ],
         "name": "Strategy",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": true,
-            "id": 1304,
+            "id": 1363,
             "name": "InterfaceId_Strategy",
             "nodeType": "VariableDeclaration",
-            "scope": 1330,
+            "scope": 1389,
             "src": "308:56:5",
             "stateVariable": true,
             "storageLocation": "default",
@@ -744,7 +744,7 @@
               "typeString": "bytes4"
             },
             "typeName": {
-              "id": 1302,
+              "id": 1361,
               "name": "bytes4",
               "nodeType": "ElementaryTypeName",
               "src": "308:6:5",
@@ -756,7 +756,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30783665333031393235",
-              "id": 1303,
+              "id": 1362,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -775,7 +775,7 @@
           },
           {
             "body": {
-              "id": 1316,
+              "id": 1375,
               "nodeType": "Block",
               "src": "423:57:5",
               "statements": [
@@ -785,11 +785,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1313,
+                        "id": 1372,
                         "name": "InterfaceId_Strategy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1304,
+                        "referencedDeclaration": 1363,
                         "src": "452:20:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes4",
@@ -804,18 +804,18 @@
                           "typeString": "bytes4"
                         }
                       ],
-                      "id": 1312,
+                      "id": 1371,
                       "name": "_registerInterface",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 4644,
+                      "referencedDeclaration": 4703,
                       "src": "433:18:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
                         "typeString": "function (bytes4)"
                       }
                     },
-                    "id": 1314,
+                    "id": 1373,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -829,14 +829,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1315,
+                  "id": 1374,
                   "nodeType": "ExpressionStatement",
                   "src": "433:40:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 1317,
+            "id": 1376,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -845,11 +845,11 @@
                 "arguments": [
                   {
                     "argumentTypes": null,
-                    "id": 1309,
+                    "id": 1368,
                     "name": "_owner",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1306,
+                    "referencedDeclaration": 1365,
                     "src": "415:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -857,10 +857,10 @@
                     }
                   }
                 ],
-                "id": 1310,
+                "id": 1369,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1308,
+                  "id": 1367,
                   "name": "Contract",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
@@ -878,15 +878,15 @@
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1307,
+              "id": 1366,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1306,
+                  "id": 1365,
                   "name": "_owner",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1317,
+                  "scope": 1376,
                   "src": "383:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -895,7 +895,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 1305,
+                    "id": 1364,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "383:7:5",
@@ -912,12 +912,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1311,
+              "id": 1370,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "423:0:5"
             },
-            "scope": 1330,
+            "scope": 1389,
             "src": "371:109:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -925,7 +925,7 @@
           },
           {
             "body": {
-              "id": 1328,
+              "id": 1387,
               "nodeType": "Block",
               "src": "538:40:5",
               "statements": [
@@ -937,18 +937,18 @@
                       "argumentTypes": [],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 1324,
+                        "id": 1383,
                         "name": "super",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 6572,
+                        "referencedDeclaration": 6631,
                         "src": "555:5:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_super$_Strategy_$1330",
+                          "typeIdentifier": "t_super$_Strategy_$1389",
                           "typeString": "contract super Strategy"
                         }
                       },
-                      "id": 1325,
+                      "id": 1384,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -962,7 +962,7 @@
                         "typeString": "function () returns (bool)"
                       }
                     },
-                    "id": 1326,
+                    "id": 1385,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -976,29 +976,29 @@
                       "typeString": "bool"
                     }
                   },
-                  "functionReturnParameters": 1323,
-                  "id": 1327,
+                  "functionReturnParameters": 1382,
+                  "id": 1386,
                   "nodeType": "Return",
                   "src": "548:23:5"
                 }
               ]
             },
             "documentation": null,
-            "id": 1329,
+            "id": 1388,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
             "modifiers": [
               {
                 "arguments": null,
-                "id": 1320,
+                "id": 1379,
                 "modifierName": {
                   "argumentTypes": null,
-                  "id": 1319,
+                  "id": 1378,
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 4773,
+                  "referencedDeclaration": 4832,
                   "src": "506:9:5",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1012,22 +1012,22 @@
             "name": "activate",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1318,
+              "id": 1377,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "503:2:5"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1323,
+              "id": 1382,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1322,
+                  "id": 1381,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1329,
+                  "scope": 1388,
                   "src": "532:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1036,7 +1036,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1321,
+                    "id": 1380,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "532:4:5",
@@ -1051,14 +1051,14 @@
               ],
               "src": "531:6:5"
             },
-            "scope": 1330,
+            "scope": 1389,
             "src": "486:92:5",
             "stateMutability": "nonpayable",
             "superFunction": 32,
             "visibility": "public"
           }
         ],
-        "scope": 1331,
+        "scope": 1390,
         "src": "82:498:5"
       }
     ],
@@ -1070,5 +1070,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-10-07T16:21:23.279Z"
+  "updatedAt": "2018-10-31T09:02:05.415Z"
 }

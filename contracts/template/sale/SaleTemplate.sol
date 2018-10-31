@@ -19,7 +19,7 @@ contract SaleTemplate is Template {
     function instantiate(bytes _bytecode, bytes _args) public payable returns (address contractAddress) {
         Sale sale = Sale(super.instantiate(_bytecode, _args));
         // InterfaceId_Sale
-        require(sale.supportsInterface(0x8139792d));
+        require(sale.supportsInterface(0x5efbb022));
         return sale;
     }
 }

@@ -14,13 +14,14 @@ contract Sale is Contract, Activatable {
         ^ this.template.selector ^ this.activate.selector
         ^ this.projectName.selector ^ this.projectSummary.selector ^ this.projectDescription.selector
         ^ this.logoUrl.selector ^ this.coverImageUrl.selector ^ this.websiteUrl.selector ^ this.whitepaperUrl.selector
-        ^ this.name.selector ^ this.weiRaised.selector ^ this.withdrawn.selector ^ this.ready.selector
-        ^ this.started.selector ^ this.successful.selector ^ this.finished.selector ^ this.paymentOf.selector
-        ^ this.update.selector ^ this.addStrategy.selector ^ this.numberOfStrategies.selector ^ this.strategyAt.selector
-        ^ this.numberOfActivatedStrategies.selector ^ this.activatedStrategyAt.selector
-        ^ this.withdraw.selector ^ this.claimRefund.selector
+        ^ this.videoUrl.selector ^ this.name.selector ^ this.weiRaised.selector ^ this.withdrawn.selector
+        ^ this.started.selector ^ this.successful.selector ^ this.finished.selector
+        ^ this.paymentOf.selector ^ this.update.selector ^ this.addStrategy.selector ^ this.numberOfStrategies.selector
+        ^ this.strategyAt.selector ^ this.numberOfActivatedStrategies.selector ^ this.activatedStrategyAt.selector
+        ^ this.withdraw.selector ^ this.claimRefund.selector ^ this.paymentOf.selector
+        ^ this.numberOfPurchasers.selector ^ this.purchaserAt.selector
      */
-    bytes4 public constant InterfaceId_Sale = 0x8139792d;
+    bytes4 public constant InterfaceId_Sale = 0x5efbb022;
 
     string public projectName;
     string public projectSummary;
@@ -29,6 +30,7 @@ contract Sale is Contract, Activatable {
     string public coverImageUrl;
     string public websiteUrl;
     string public whitepaperUrl;
+    string public videoUrl;
     string public name;
 
     uint256 public weiRaised;
@@ -37,6 +39,7 @@ contract Sale is Contract, Activatable {
     SaleStrategy[] strategies;
     SaleStrategy[] activatedStrategies;
     mapping(address => uint256) paymentOfPurchaser;
+    address[] purchasers;
 
     constructor(
         address _owner,
@@ -57,6 +60,7 @@ contract Sale is Contract, Activatable {
         string _coverImageUrl,
         string _websiteUrl,
         string _whitepaperUrl,
+        string _videoUrl,
         string _name
     ) public onlyOwner whenNotActivated {
         projectName = _projectName;
@@ -66,6 +70,7 @@ contract Sale is Contract, Activatable {
         coverImageUrl = _coverImageUrl;
         websiteUrl = _websiteUrl;
         whitepaperUrl = _whitepaperUrl;
+        videoUrl = _videoUrl;
         name = _name;
     }
 
@@ -156,10 +161,24 @@ contract Sale is Contract, Activatable {
 
         paymentOfPurchaser[_purchaser] = paymentOfPurchaser[_purchaser].add(_weiAmount);
         weiRaised = weiRaised.add(_weiAmount);
+        for (uint i = 0; i < purchasers.length; i++) {
+            if (purchasers[i] == _purchaser) {
+                return;
+            }
+        }
+        purchasers.push(_purchaser);
     }
 
     function paymentOf(address _purchaser) public view returns (uint256 weiAmount) {
         return paymentOfPurchaser[_purchaser];
+    }
+
+    function numberOfPurchasers() public view returns (uint256) {
+        return purchasers.length;
+    }
+
+    function purchaserAt(uint256 _index) public view returns (address) {
+        return purchasers[_index];
     }
 
     function withdraw() onlyOwner whenActivated public returns (bool) {
